@@ -20,6 +20,9 @@ venv/
 *.tfstate
 *.tfstate.backup
 .terraform/
+.terraform/**
+infrastructure/**/.terraform/
+infrastructure/**/.terraform/**
 crash.log
 override.tf
 override.tf.json
@@ -27,6 +30,7 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+.terraform.lock.hcl
 
 # AWS Lambda local artifacts
 *.zip
