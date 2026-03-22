@@ -1,7 +1,3 @@
-variable "aws_region" {
-  default = "us-east-1"
-}
-
 variable "bucket_name" {
   description = "S3 bucket name"
 }
@@ -19,10 +15,19 @@ variable "enable_versioning" {
 }
 
 variable "enable_logging" {
-  default = true
+  default = false
 }
 
 variable "log_bucket" {
   description = "S3 bucket for access logs"
   default     = null
+}
+
+variable "tags" {
+  type = map(string)
+  description = "resource tags for s3 bucket"
+
+  default = {
+    "Service" = "file-processing"
+  }
 }

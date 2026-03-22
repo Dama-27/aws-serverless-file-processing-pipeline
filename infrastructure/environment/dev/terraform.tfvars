@@ -1,0 +1,1 @@
+bucket_name = "temp-upload-s3-bucket-serverless-file-processing"

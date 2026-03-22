@@ -51,18 +51,18 @@ resource "aws_s3_bucket_lifecycle_configuration" "this" {
     id     = "transition-rule"
     status = "Enabled"
 
-    transition {
-      days          = 30
-      storage_class = "STANDARD_IA"
-    }
+    # transition {
+    #   days          = 30
+    #   storage_class = "STANDARD_IA"
+    # }
 
-    transition {
-      days          = 60
-      storage_class = "GLACIER"
-    }
+    # transition {
+    #   days          = 60
+    #   storage_class = "GLACIER"
+    # }
 
     expiration {
-      days = 365
+      days = 1
     }
   }
 }
